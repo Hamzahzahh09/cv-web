@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-primary text-white scroll-smooth">
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 w-full py-4 px-[12%] bg-black/30 backdrop-blur-md flex justify-between items-center z-50">
+        <a href="#home" class="text-3xl font-extrabold text-white hover:scale-110 transition-transform duration-300">
+            Hamzah <span class="text-accent text-shadow-accent">Ahmad</span>
+        </a>
+
+        <i class='bx bx-menu text-4xl text-accent md:hidden' id="menu-icon"></i>
+
+        <nav class="navbar hidden md:flex">
+            <a href="#home"
+                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300 active">Home</a>
+            <a href="#education"
+                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Education</a>
+            <a href="#services"
+                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Project</a>
+            <a href="#portfolio"
+                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Portfolio</a>
+            <a href="#contact"
+                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center gap-36 pt-32 px-[12%]">
+        <div class="home-content flex flex-col items-start text-left justify-center mt-12">
+            <h1 class="text-7xl font-bold leading-none mt-6">Hi, Its <span class="text-accent">Hamzah</span></h1>
+            <h3 class="text-animation text-[34px] font-semibold min-w-[280px] mb-8 mt-4">
+                I'm a <span class="relative">
+                    <span
+                        class="after:content-[''] after:absolute after:bg-primary after:w-[calc(100%+8px)] after:h-full after:border-l-2 after:border-primary after:right-[-8px] after:animate-typing after:animate-cursor"></span>
+                </span>
+            </h3>
+            <p class="text-xl font-medium leading-relaxed max-w-[1000px]">
+                I'm passionate about crafting clean, modern, and responsive websites that not only look great but also
+                provide a smooth user experience. With a strong foundation in HTML, CSS, and JavaScript, I love bringing
+                ideas to life in the browser.
+            </p>
+
+            <div class="social-icons flex mt-12">
+                <a href="https://www.linkedin.com/in/hamzah-ahmad-b45a8b329/"
+                    class="w-12 h-12 flex justify-center items-center bg-transparent border-2 border-accent rounded-full text-2xl text-accent mr-6 hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-accent hover:box-shadow-accent transition-all duration-300"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Hamzahzahh09"
+                    class="w-12 h-12 flex justify-center items-center bg-transparent border-2 border-accent rounded-full text-2xl text-accent mr-6 hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-accent hover:box-shadow-accent transition-all duration-300"><i
+                        class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/thisiszaah/"
+                    class="w-12 h-12 flex justify-center items-center bg-transparent border-2 border-accent rounded-full text-2xl text-accent mr-6 hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-accent hover:box-shadow-accent transition-all duration-300"><i
+                        class='bx bxl-instagram-alt'></i></a>
+                <a href="https://x.com/hamzzahh09"
+                    class="w-12 h-12 flex justify-center items-center bg-transparent border-2 border-accent rounded-full text-2xl text-accent mr-6 hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-accent hover:box-shadow-accent transition-all duration-300"><i
+                        class='bx bxl-twitter'></i></a>
+            </div>
+
+            <div class="btn-group flex items-center gap-6 mt-12">
+                <a href="#"
+                    class="btn px-11 py-4 bg-accent box-shadow-accent rounded-full text-lg text-black font-semibold border-2 border-transparent tracking-wider hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">Hire</a>
+                <a href="#contact"
+                    class="btn px-11 py-4 bg-black text-accent border-2 border-accent rounded-full text-lg font-semibold tracking-wider hover:box-shadow-accent hover:bg-accent hover:text-black transition-all duration-300">Contact</a>
+            </div>
+        </div>
+
+        <div class="home-img rounded-full">
+            <img src="img/Group 2.png" alt=""
+                class="relative top-12 w-[32vw] rounded-full box-shadow-accent cursor-pointer transition-all duration-[1400ms] hover:box-shadow-accent-xl">
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="min-h-screen py-24 px-4 bg-secondary">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-white">
+                <span class="text-accent">Education</span>
+            </h2>
+
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 h-full w-1 bg-accent transform -translate-x-1/2"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="mb-16 md:flex md:justify-between md:items-center w-full right-timeline">
+                    <div class="order-1 md:w-5/12"></div>
+                    <div class="order-1 md:w-5/12 px-4 py-6">
+                        <div
+                            class="p-6 bg-primary rounded-2xl border-2 border-accent shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all duration-300">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold text-accent">Elementary School</h3>
+                                <span
+                                    class="text-lg font-semibold text-white bg-accent/20 px-4 py-1 rounded-full">2016 - 2021</span>
+                            </div>
+                            <p class="text-gray-300">
+                               I am Scool at SDI PLUS Al-Hanif Built a strong foundation in academics and Islamic values, nurturing curiosity and discipline from an early age.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="mb-16 md:flex md:justify-between md:items-center w-full left-timeline">
+                    <div class="order-1 md:w-5/12 px-4 py-6">
+                        <div
+                            class="p-6 bg-primary rounded-2xl border-2 border-accent shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all duration-300">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold text-accent">Junior High School</h3>
+                                <span
+                                    class="text-lg font-semibold text-white bg-accent/20 px-4 py-1 rounded-full">2021 - 2024</span>
+                            </div>
+                            <p class="text-gray-300">
+                                I am Scool at SMPI Ar-Risalah Al-Atsari Deepened knowledge in science and religion while exploring early interests in technology through various school activities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:w-5/12"></div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="mb-16 md:flex md:justify-between md:items-center w-full right-timeline">
+                    <div class="order-1 md:w-5/12"></div>
+                    <div class="order-1 md:w-5/12 px-4 py-6">
+                        <div
+                            class="p-6 bg-primary rounded-2xl border-2 border-accent shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all duration-300">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold text-accent">Vocational High School</h3>
+                                <span
+                                    class="text-lg font-semibold text-white bg-accent/20 px-4 py-1 rounded-full">2024 - 2026</span>
+                            </div>
+                            <p class="text-gray-300">
+                                I am Scool at SMK Madinatul Quran Focused on computer networks, programming fundamentals, and web development. Actively involved in tech projects and extracurriculars.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <!-- <section id="services" class="min-h-screen py-24 px-4 bg-primary">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-white">
+                My <span class="text-accent">Projects</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Service Box 1 -->
+                <!-- <div
+                    class="group relative bg-gradient-to-br from-primary to-secondary rounded-2xl p-0.5 shadow-lg transition-all duration-300 hover:shadow-accent/30">
+                    <div class="relative bg-primary rounded-2xl p-8 h-full">
+                        <div
+                            class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-primary text-3xl transition-all duration-300 group-hover:rotate-[30deg]">
+                            <i class='bx bx-palette'></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent mb-4">UI Design</h3>
+                        <p class="text-gray-300 mb-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptates voluptatum
+                            voluptate quod, quia quas voluptatem quibusdam quidem quae quos.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-accent font-medium hover:text-white transition-colors">
+                            View Projects
+                            <i class='bx bx-chevron-right ml-2 text-xl'></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Service Box 2 -->
+                <!-- <div
+                    class="group relative bg-gradient-to-br from-primary to-secondary rounded-2xl p-0.5 shadow-lg transition-all duration-300 hover:shadow-accent/30">
+                    <div class="relative bg-primary rounded-2xl p-8 h-full">
+                        <div
+                            class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-primary text-3xl transition-all duration-300 group-hover:rotate-[30deg]">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent mb-4">Frontend Development</h3>
+                        <p class="text-gray-300 mb-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptates voluptatum
+                            voluptate quod, quia quas voluptatem quibusdam quidem quae quos.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-accent font-medium hover:text-white transition-colors">
+                            View Projects
+                            <i class='bx bx-chevron-right ml-2 text-xl'></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Service Box 3 -->
+                <!-- <div
+                    class="group relative bg-gradient-to-br from-primary to-secondary rounded-2xl p-0.5 shadow-lg transition-all duration-300 hover:shadow-accent/30">
+                    <div class="relative bg-primary rounded-2xl p-8 h-full">
+                        <div
+                            class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-primary text-3xl transition-all duration-300 group-hover:rotate-[30deg]">
+                            <i class='bx bx-server'></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent mb-4">Backend Development</h3>
+                        <p class="text-gray-300 mb-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptates voluptatum
+                            voluptate quod, quia quas voluptatem quibusdam quidem quae quos.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-accent font-medium hover:text-white transition-colors">
+                            View Projects
+                            <i class='bx bx-chevron-right ml-2 text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Box 4 -->
+                <!-- <div
+                    class="group relative bg-gradient-to-br from-primary to-secondary rounded-2xl p-0.5 shadow-lg transition-all duration-300 hover:shadow-accent/30">
+                    <div class="relative bg-primary rounded-2xl p-8 h-full">
+                        <div
+                            class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-primary text-3xl transition-all duration-300 group-hover:rotate-[30deg]">
+                            <i class='bx bx-layout'></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent mb-4">Fullstack Development</h3>
+                        <p class="text-gray-300 mb-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptates voluptatum
+                            voluptate quod, quia quas voluptatem quibusdam quidem quae quos.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-accent font-medium hover:text-white transition-colors">
+                            View Projects
+                            <i class='bx bx-chevron-right ml-2 text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="min-h-screen py-24 px-[12%] bg-secondary text-white">
+        <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-white">My <span class="text-accent">Portfolio</span></h2>
+
+        <div class="portfolio-container grid grid-cols-3 gap-12 mb-20">
+            <div
+                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/hazz clothes.png" alt="Project 1"
+                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+                <div class="portfolio-info">
+                    <h4 class="text-2xl mt-6 font-semibold">Project Clothes Website</h4>
+                    <p class="text-base text-white mt-4">
+                        Hazz Clothes is a modern and responsive fashion website designed to showcase trendy clothing collections.
+                    </p>
+                    <a href="https://hazz-clothes.vercel.app"
+                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div
+                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/bali tour.png" alt="Project 2"
+                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+                <div class="portfolio-info">
+                    <h4 class="text-2xl mt-6 font-semibold">Project Travel Website</h4>
+                    <p class="text-base text-white mt-4">
+                        This project involved building a full-stack application with Node.js, Express, and MongoDB,
+                        along with a sleek and responsive design.
+                    </p>
+                    <a href="https://bali-tour-five.vercel.app"
+                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div
+                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/bukalapak.png" alt="Project 3"
+                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+                <div class="portfolio-info">
+                    <h4 class="text-2xl mt-6 font-semibold">Project Bukalapak Mobile Design</h4>
+                    <p class="text-base text-white mt-4">
+                        A mobile-friendly e-commerce site built with React and Firebase for seamless real-time
+                        transactions and user experience.
+                    </p>
+                    <a href="#"
+                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
+                        Details</a>
+                </div>
+            </div>
+
+            <div
+                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/Screenshot 2025-04-24 084912.png" alt="Project 4"
+                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+                <div class="portfolio-info">
+                    <h4 class="text-2xl mt-6 font-semibold">Project Tokopedia Website Design</h4>
+                    <p class="text-base text-white mt-4">
+                        This project was a personal blog platform built with WordPress, featuring custom themes and a
+                        user-friendly interface.
+                    </p>
+                    <a href="#"
+                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
+                        Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen py-20 px-4 bg-primary">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                    Get In <span class="text-accent">Touch</span>
+                </h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    Have a project in mind or want to collaborate? Feel free to reach out!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Contact Form -->
+                <div
+                    class="bg-secondary rounded-2xl p-8 shadow-lg border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Full Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
+                                    placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
+                                    placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
+                                <input type="tel" id="phone"
+                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
+                                    placeholder="+62 123 4567">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                                <input type="text" id="subject"
+                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
+                                    placeholder="Project inquiry">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 px-8 bg-accent text-primary font-bold rounded-xl hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class='bx bx-paper-plane text-xl'></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div
+                        class="flex items-start gap-6 p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                        <div class="bg-accent/20 p-4 rounded-xl text-accent">
+                            <i class='bx bx-envelope text-3xl'></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Email Me</h3>
+                            <p class="text-gray-300">hamzahzahh@gmail.com</p>
+                            <p class="text-gray-300">contact@hamzah.dev</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-start gap-6 p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                        <div class="bg-accent/20 p-4 rounded-xl text-accent">
+                            <i class='bx bx-phone-call text-3xl'></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Call Me</h3>
+                            <p class="text-gray-300">+62 857 1646 9544</p>
+                            <p class="text-gray-300">Mon-Fri, 9AM-5PM</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-start gap-6 p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                        <div class="bg-accent/20 p-4 rounded-xl text-accent">
+                            <i class='bx bx-map text-3xl'></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Location</h3>
+                            <p class="text-gray-300">Bekasi, Indonesia</p>
+                            <p class="text-gray-300">Remote work available</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 justify-center md:justify-start pt-4">
+                        <a href="https://www.linkedin.com/in/hamzah-ahmad-b45a8b329/"
+                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/Hamzahzahh09"
+                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://www.instagram.com/thisiszaah/"
+                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
+                            <i class='bx bxl-instagram-alt'></i>
+                        </a>
+                        <a href="https://x.com/hamzzahh09"
+                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative w-full py-10 bg-secondary">
+        <div class="social text-center pb-6 text-accent">
+            <a href="https://www.linkedin.com/in/hamzah-ahmad-b45a8b329/"
+                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
+                    class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Hamzahzahh09"
+                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
+                    class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/thisiszaah/"
+                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
+                    class='bx bxl-instagram-alt'></i></a>
+            <a href="https://x.com/hamzzahh09"
+                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
+                    class='bx bxl-twitter'></i></a>
+        </div>
+
+        <ul class="list m-0 p-0 text-lg leading-normal text-center mb-0">
+            <li class="inline-block px-4"><a href="#"
+                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">FAQ</a>
+            </li>
+            <li class="inline-block px-4"><a href="#"
+                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">Services</a>
+            </li>
+            <li class="inline-block px-4"><a href="#"
+                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">About
+                    Me</a></li>
+            <li class="inline-block px-4"><a href="#"
+                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright mt-12 text-center text-base text-white">
+            &copy; 2025 Hamzah Ahmad | All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
