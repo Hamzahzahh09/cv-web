@@ -13,25 +13,33 @@
 <body class="bg-primary text-white scroll-smooth">
     <!-- Header -->
     <header
-        class="fixed top-0 left-0 w-full py-4 px-[12%] bg-black/30 backdrop-blur-md flex justify-between items-center z-50">
-        <a href="#home" class="text-3xl font-extrabold text-white hover:scale-110 transition-transform duration-300">
+        class="fixed top-0 left-0 w-full py-4 px-4 md:px-[12%] bg-black/30 backdrop-blur-md flex justify-between items-center z-50">
+        <a href="#home" class="text-2xl md:text-3xl font-extrabold text-white hover:scale-110 transition-transform duration-300">
             Hamzah <span class="text-accent text-shadow-accent">Ahmad</span>
         </a>
 
-        <i class='bx bx-menu text-4xl text-accent md:hidden' id="menu-icon"></i>
+        <i class='bx bx-menu text-4xl text-accent md:hidden cursor-pointer' id="menu-icon"></i>
 
         <nav class="navbar hidden md:flex">
             <a href="#home"
-                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300 active">Home</a>
+                class="text-lg md:text-xl font-medium ml-4 md:ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300 active">Home</a>
             <a href="#education"
-                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Education</a>
-            <a href="#services"
-                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Project</a>
+                class="text-lg md:text-xl font-medium ml-4 md:ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Education</a>
             <a href="#portfolio"
-                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Portfolio</a>
+                class="text-lg md:text-xl font-medium ml-4 md:ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Portfolio</a>
             <a href="#contact"
-                class="text-xl font-medium ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Contact</a>
+                class="text-lg md:text-xl font-medium ml-4 md:ml-16 text-white hover:text-accent border-b-2 border-transparent hover:border-accent transition-colors duration-300">Contact</a>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu absolute top-full left-0 w-full bg-primary/95 hidden md:hidden" id="mobile-menu">
+            <div class="flex flex-col p-4">
+                <a href="#home" class="py-3 px-4 text-lg hover:bg-secondary rounded-md">Home</a>
+                <a href="#education" class="py-3 px-4 text-lg hover:bg-secondary rounded-md">Education</a>
+                <a href="#portfolio" class="py-3 px-4 text-lg hover:bg-secondary rounded-md">Portfolio</a>
+                <a href="#contact" class="py-3 px-4 text-lg hover:bg-secondary rounded-md">Contact</a>
+            </div>
+        </div>
     </header>
 
     <!-- Home Section -->
@@ -39,7 +47,7 @@
         <div class="home-content flex flex-col items-start text-left justify-center mt-12">
             <h1 class="text-7xl font-bold leading-none mt-6">Hi, Its <span class="text-accent">Hamzah</span></h1>
             <h3 class="text-animation text-[34px] font-semibold min-w-[280px] mb-8 mt-4">
-                I'm a <span class="relative">
+                I'm a <span class="relative text-accent">
                     <span
                         class="after:content-[''] after:absolute after:bg-primary after:w-[calc(100%+8px)] after:h-full after:border-l-2 after:border-primary after:right-[-8px] after:animate-typing after:animate-cursor"></span>
                 </span>
@@ -243,234 +251,222 @@
     </section> -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="min-h-screen py-24 px-[12%] bg-secondary text-white">
-        <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-white">My <span class="text-accent">Portfolio</span></h2>
+    <!-- Portfolio Section -->
+<section id="portfolio" class="min-h-screen py-12 md:py-24 px-4 sm:px-6 lg:px-12 bg-secondary text-white">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-center mb-8 md:mb-16 text-white">
+            My <span class="text-accent">Portfolio</span>
+        </h2>
 
-        <div class="portfolio-container grid grid-cols-3 gap-12 mb-20">
-            <div
-                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
-                <img src="img/hazz clothes.png" alt="Project 1"
-                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+        <div class="portfolio-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mb-12 md:mb-20">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item bg-primary p-6 md:p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-[1.02] md:hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/hazz clothes.png" alt="Project 1" class="w-full h-40 md:h-48 object-cover rounded-lg box-shadow-accent">
                 <div class="portfolio-info">
-                    <h4 class="text-2xl mt-6 font-semibold">Project Clothes Website</h4>
-                    <p class="text-base text-white mt-4">
+                    <h4 class="text-xl md:text-2xl mt-4 md:mt-6 font-semibold">Project Clothes Website</h4>
+                    <p class="text-sm md:text-base text-white mt-2 md:mt-4">
                         Hazz Clothes is a modern and responsive fashion website designed to showcase trendy clothing collections.
                     </p>
-                    <a href="https://hazz-clothes.vercel.app"
-                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
-                        Details</a>
+                    <a href="https://hazz-clothes.vercel.app" class="btn mt-4 md:mt-8 inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-black rounded-full text-sm md:text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">
+                        View Details
+                    </a>
                 </div>
             </div>
 
-            <div
-                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
-                <img src="img/bali tour.png" alt="Project 2"
-                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item bg-primary p-6 md:p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-[1.02] md:hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/bali tour.png" alt="Project 2" class="w-full h-40 md:h-48 object-cover rounded-lg box-shadow-accent">
                 <div class="portfolio-info">
-                    <h4 class="text-2xl mt-6 font-semibold">Project Travel Website</h4>
-                    <p class="text-base text-white mt-4">
-                        This project involved building a full-stack application with Node.js, Express, and MongoDB,
-                        along with a sleek and responsive design.
+                    <h4 class="text-xl md:text-2xl mt-4 md:mt-6 font-semibold">Project Travel Website</h4>
+                    <p class="text-sm md:text-base text-white mt-2 md:mt-4">
+                        This project involved building a full-stack application with Node.js, Express, and MongoDB, along with a sleek and responsive design.
                     </p>
-                    <a href="https://bali-tour-five.vercel.app"
-                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
-                        Details</a>
+                    <a href="https://bali-tour-five.vercel.app" class="btn mt-4 md:mt-8 inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-black rounded-full text-sm md:text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">
+                        View Details
+                    </a>
                 </div>
             </div>
 
-            <div
-                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
-                <img src="img/bukalapak.png" alt="Project 3"
-                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item bg-primary p-6 md:p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-[1.02] md:hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/bukalapak.png" alt="Project 3" class="w-full h-40 md:h-48 object-cover rounded-lg box-shadow-accent">
                 <div class="portfolio-info">
-                    <h4 class="text-2xl mt-6 font-semibold">Project Bukalapak Mobile Design</h4>
-                    <p class="text-base text-white mt-4">
-                        A mobile-friendly e-commerce site built with React and Firebase for seamless real-time
-                        transactions and user experience.
+                    <h4 class="text-xl md:text-2xl mt-4 md:mt-6 font-semibold">Project Bukalapak Mobile Design</h4>
+                    <p class="text-sm md:text-base text-white mt-2 md:mt-4">
+                        A mobile-friendly e-commerce site built with React and Firebase for seamless real-time transactions and user experience.
                     </p>
-                    <a href="#"
-                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
-                        Details</a>
+                    <a href="#" class="btn mt-4 md:mt-8 inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-black rounded-full text-sm md:text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">
+                        View Details
+                    </a>
                 </div>
             </div>
 
-            <div
-                class="portfolio-item bg-primary p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
-                <img src="img/Screenshot 2025-04-24 084912.png" alt="Project 4"
-                    class="w-full h-48 object-cover rounded-lg box-shadow-accent">
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item bg-primary p-6 md:p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-[1.02] md:hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/Screenshot 2025-04-24 084912.png" alt="Project 4" class="w-full h-40 md:h-48 object-cover rounded-lg box-shadow-accent">
                 <div class="portfolio-info">
-                    <h4 class="text-2xl mt-6 font-semibold">Project Tokopedia Website Design</h4>
-                    <p class="text-base text-white mt-4">
-                        This project was a personal blog platform built with WordPress, featuring custom themes and a
-                        user-friendly interface.
+                    <h4 class="text-xl md:text-2xl mt-4 md:mt-6 font-semibold">Project Tokopedia Website Design</h4>
+                    <p class="text-sm md:text-base text-white mt-2 md:mt-4">
+                        This project was a personal blog platform built with WordPress, featuring custom themes and a user-friendly interface.
                     </p>
-                    <a href="#"
-                        class="btn mt-8 inline-block px-8 py-4 bg-accent text-black rounded-full text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">View
-                        Details</a>
+                    <a href="#" class="btn mt-4 md:mt-8 inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-black rounded-full text-sm md:text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">
+                        View Details
+                    </a>
+                </div>
+            </div>
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-item bg-primary p-6 md:p-8 rounded-2xl border-2 border-accent box-shadow-accent cursor-pointer hover:scale-[1.02] md:hover:scale-105 hover:box-shadow-accent-lg transition-all duration-300">
+                <img src="img/bandung.png" alt="Project 4" class="w-full h-40 md:h-48 object-cover rounded-lg box-shadow-accent">
+                <div class="portfolio-info">
+                    <h4 class="text-xl md:text-2xl mt-4 md:mt-6 font-semibold">Project Bandung Profile Website</h4>
+                    <p class="text-sm md:text-base text-white mt-2 md:mt-4">
+                        TThis project is a static website that presents information about Bandung City.
+                    </p>
+                    <a href="#" class="btn mt-4 md:mt-8 inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-black rounded-full text-sm md:text-base font-semibold border-2 border-transparent hover:bg-white hover:text-black hover:box-shadow-accent transition-all duration-300">
+                        View Details
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="min-h-screen py-20 px-4 bg-primary">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-bold text-white mb-4">
-                    Get In <span class="text-accent">Touch</span>
-                </h2>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-                    Have a project in mind or want to collaborate? Feel free to reach out!
-                </p>
+<!-- Contact Section -->
+<section id="contact" class="min-h-screen py-12 md:py-20 px-4 sm:px-6 bg-primary">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-8 md:mb-16">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-2 md:mb-4">
+                Contact <span class="text-accent">Me</span>
+            </h2>
+            <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+                If you want to contact me, please use the contact form below. I will respond as soon as possible.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <!-- Contact Form -->
+            <div class="bg-secondary rounded-2xl p-6 md:p-8 shadow-lg border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                <form class="space-y-4 md:space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-1 md:mb-2 text-sm md:text-base">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 md:px-6 md:py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all text-sm md:text-base" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-1 md:mb-2 text-sm md:text-base">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 md:px-6 md:py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all text-sm md:text-base" placeholder="your@email.com">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-1 md:mb-2 text-sm md:text-base">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 md:px-6 md:py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all text-sm md:text-base" placeholder="+62 123 4567">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-1 md:mb-2 text-sm md:text-base">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 md:px-6 md:py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all text-sm md:text-base" placeholder="Project inquiry">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-gray-300 mb-1 md:mb-2 text-sm md:text-base">Your Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 md:px-6 md:py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all text-sm md:text-base" placeholder="Tell me about your project..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 md:py-4 px-6 md:px-8 bg-accent text-primary font-bold rounded-xl hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
+                        <i class='bx bx-paper-plane text-lg md:text-xl'></i>
+                        Send Message
+                    </button>
+                </form>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Contact Form -->
-                <div
-                    class="bg-secondary rounded-2xl p-8 shadow-lg border border-accent/20 hover:border-accent/50 transition-all duration-300">
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-gray-300 mb-2">Full Name</label>
-                                <input type="text" id="name"
-                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
-                                    placeholder="Your name">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-300 mb-2">Email</label>
-                                <input type="email" id="email"
-                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
-                                    placeholder="your@email.com">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
-                                <input type="tel" id="phone"
-                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
-                                    placeholder="+62 123 4567">
-                            </div>
-                            <div>
-                                <label for="subject" class="block text-gray-300 mb-2">Subject</label>
-                                <input type="text" id="subject"
-                                    class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
-                                    placeholder="Project inquiry">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
-                            <textarea id="message" rows="5"
-                                class="w-full px-6 py-4 bg-primary rounded-xl border border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/50 text-white placeholder-gray-500 transition-all"
-                                placeholder="Tell me about your project..."></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full py-4 px-8 bg-accent text-primary font-bold rounded-xl hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2">
-                            <i class='bx bx-paper-plane text-xl'></i>
-                            Send Message
-                        </button>
-                    </form>
+            <!-- Contact Info -->
+            <div class="space-y-4 md:space-y-8">
+                <!-- Email Info -->
+                <div class="flex items-start gap-4 md:gap-6 p-4 md:p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                    <div class="bg-accent/20 p-3 md:p-4 rounded-xl text-accent">
+                        <i class='bx bx-envelope text-2xl md:text-3xl'></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">Email Me</h3>
+                        <p class="text-sm md:text-base text-gray-300">hamzahzahh09@gmail.com</p>
+                        <p class="text-sm md:text-base text-gray-300">contact@hamzah.dev</p>
+                    </div>
                 </div>
 
-                <!-- Contact Info -->
-                <div class="space-y-8">
-                    <div
-                        class="flex items-start gap-6 p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
-                        <div class="bg-accent/20 p-4 rounded-xl text-accent">
-                            <i class='bx bx-envelope text-3xl'></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Email Me</h3>
-                            <p class="text-gray-300">hamzahzahh@gmail.com</p>
-                            <p class="text-gray-300">contact@hamzah.dev</p>
-                        </div>
+                <!-- Phone Info -->
+                <div class="flex items-start gap-4 md:gap-6 p-4 md:p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                    <div class="bg-accent/20 p-3 md:p-4 rounded-xl text-accent">
+                        <i class='bx bx-phone-call text-2xl md:text-3xl'></i>
                     </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">Call Me</h3>
+                        <p class="text-sm md:text-base text-gray-300">+62 857 1646 9544</p>
+                        <p class="text-sm md:text-base text-gray-300">Mon-Fri, 9AM-5PM</p>
+                    </div>
+                </div>
 
-                    <div
-                        class="flex items-start gap-6 p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
-                        <div class="bg-accent/20 p-4 rounded-xl text-accent">
-                            <i class='bx bx-phone-call text-3xl'></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Call Me</h3>
-                            <p class="text-gray-300">+62 857 1646 9544</p>
-                            <p class="text-gray-300">Mon-Fri, 9AM-5PM</p>
-                        </div>
+                <!-- Location Info -->
+                <div class="flex items-start gap-4 md:gap-6 p-4 md:p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
+                    <div class="bg-accent/20 p-3 md:p-4 rounded-xl text-accent">
+                        <i class='bx bx-map text-2xl md:text-3xl'></i>
                     </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">Location</h3>
+                        <p class="text-sm md:text-base text-gray-300">Bekasi, Indonesia</p>
+                        <p class="text-sm md:text-base text-gray-300">Student</p>
+                    </div>
+                </div>
 
-                    <div
-                        class="flex items-start gap-6 p-6 bg-secondary rounded-2xl border border-accent/20 hover:border-accent/50 transition-all duration-300">
-                        <div class="bg-accent/20 p-4 rounded-xl text-accent">
-                            <i class='bx bx-map text-3xl'></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Location</h3>
-                            <p class="text-gray-300">Bekasi, Indonesia</p>
-                            <p class="text-gray-300">Remote work available</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 justify-center md:justify-start pt-4">
-                        <a href="https://www.linkedin.com/in/hamzah-ahmad-b45a8b329/"
-                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
-                            <i class='bx bxl-linkedin'></i>
-                        </a>
-                        <a href="https://github.com/Hamzahzahh09"
-                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
-                            <i class='bx bxl-github'></i>
-                        </a>
-                        <a href="https://www.instagram.com/thisiszaah/"
-                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
-                            <i class='bx bxl-instagram-alt'></i>
-                        </a>
-                        <a href="https://x.com/hamzzahh09"
-                            class="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-xl">
-                            <i class='bx bxl-twitter'></i>
-                        </a>
-                    </div>
+                <!-- Social Icons -->
+                <div class="flex gap-3 md:gap-4 justify-center md:justify-start pt-2 md:pt-4">
+                    <a href="https://www.linkedin.com/in/hamzah-ahmad-b45a8b329/" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-lg md:text-xl">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/Hamzahzahh09" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-lg md:text-xl">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://www.instagram.com/thisiszaah/" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-lg md:text-xl">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="https://x.com/hamzzahh09" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-lg md:text-xl">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="relative w-full py-10 bg-secondary">
-        <div class="social text-center pb-6 text-accent">
-            <a href="https://www.linkedin.com/in/hamzah-ahmad-b45a8b329/"
-                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
-                    class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/Hamzahzahh09"
-                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
-                    class='bx bxl-github'></i></a>
-            <a href="https://www.instagram.com/thisiszaah/"
-                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
-                    class='bx bxl-instagram-alt'></i></a>
-            <a href="https://x.com/hamzzahh09"
-                class="text-2xl text-accent border-2 border-accent w-10 h-10 inline-block text-center rounded-full mx-2.5 hover:scale-120 hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300"><i
-                    class='bx bxl-twitter'></i></a>
-        </div>
+<!-- Footer -->
+<footer class="relative w-full py-8 md:py-10 bg-secondary">
+    <div class="social text-center pb-4 md:pb-6 text-accent">
+        <a href="https://www.linkedin.com/in/hamzah-ahmad-b45a8b329/" class="text-xl md:text-2xl text-accent border-2 border-accent w-9 h-9 md:w-10 md:h-10 inline-flex items-center justify-center rounded-full mx-1 md:mx-2.5 hover:scale-110 md:hover:scale-120 hover:-translate-y-1 md:hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300">
+            <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://github.com/Hamzahzahh09" class="text-xl md:text-2xl text-accent border-2 border-accent w-9 h-9 md:w-10 md:h-10 inline-flex items-center justify-center rounded-full mx-1 md:mx-2.5 hover:scale-110 md:hover:scale-120 hover:-translate-y-1 md:hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300">
+            <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://www.instagram.com/thisiszaah/" class="text-xl md:text-2xl text-accent border-2 border-accent w-9 h-9 md:w-10 md:h-10 inline-flex items-center justify-center rounded-full mx-1 md:mx-2.5 hover:scale-110 md:hover:scale-120 hover:-translate-y-1 md:hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300">
+            <i class='bx bxl-instagram-alt'></i>
+        </a>
+        <a href="https://x.com/hamzzahh09" class="text-xl md:text-2xl text-accent border-2 border-accent w-9 h-9 md:w-10 md:h-10 inline-flex items-center justify-center rounded-full mx-1 md:mx-2.5 hover:scale-110 md:hover:scale-120 hover:-translate-y-1 md:hover:-translate-y-2 hover:bg-accent hover:text-black hover:box-shadow-accent transition-all duration-300">
+            <i class='bx bxl-twitter'></i>
+        </a>
+    </div>
 
-        <ul class="list m-0 p-0 text-lg leading-normal text-center mb-0">
-            <li class="inline-block px-4"><a href="#"
-                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">FAQ</a>
-            </li>
-            <li class="inline-block px-4"><a href="#"
-                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">Services</a>
-            </li>
-            <li class="inline-block px-4"><a href="#"
-                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">About
-                    Me</a></li>
-            <li class="inline-block px-4"><a href="#"
-                    class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">Contact</a>
-            </li>
-        </ul>
+    <ul class="list m-0 p-0 text-sm md:text-lg leading-normal text-center mb-0">
+        <li class="inline-block px-2 md:px-4"><a href="#" class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">FAQ</a></li>
+        <li class="inline-block px-2 md:px-4"><a href="#" class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">Services</a></li>
+        <li class="inline-block px-2 md:px-4"><a href="#" class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">About Me</a></li>
+        <li class="inline-block px-2 md:px-4"><a href="#" class="text-white border-b-2 border-transparent hover:border-accent transition-all duration-300">Contact</a></li>
+    </ul>
 
-        <p class="copyright mt-12 text-center text-base text-white">
-            &copy; 2025 Hamzah Ahmad | All rights reserved.
-        </p>
-    </footer>
+    <p class="copyright mt-8 md:mt-12 text-center text-xs md:text-base text-white">
+        &copy; 2025 Hamzah Ahmad | All rights reserved.
+    </p>
+</footer>
 
     <script src="script.js"></script>
 </body>
